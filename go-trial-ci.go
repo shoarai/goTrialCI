@@ -1,5 +1,7 @@
 package gotrialci
 
+import "os"
+
 // AddPlus adds only plus numbers
 func AddPlus(n ...int) int {
 	var num int
@@ -10,4 +12,10 @@ func AddPlus(n ...int) int {
 		num += nn
 	}
 	return num
+}
+
+// IsPathExist returns whether a path exists or not.
+func IsPathExist(path string) bool {
+	_, e := os.Stat(path)
+	return e == nil
 }
