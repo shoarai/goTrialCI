@@ -7,5 +7,16 @@ import (
 )
 
 func TestAdd(t *testing.T) {
-	gotrialci.AddPlus(10)
+	for _, test := range []struct {
+		vals []int
+		want int
+	}{
+		{[]int{1, -1}, 1},
+		{[]int{1, -1}, 2}, // Test fail
+	} {
+		actual := gotrialci.AddPlus(test.vals...)
+		if actual != test.want {
+			t.Errorf("AddPlus(%v) = %d, want %d", test.vals, actual, test.want)
+		}
+	}
 }
