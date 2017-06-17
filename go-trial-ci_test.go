@@ -12,7 +12,7 @@ func TestAdd(t *testing.T) {
 		want int
 	}{
 		{[]int{1, -1}, 1},
-		{[]int{1, -1}, 2}, // Test fail
+		// {[]int{1, -1}, 2}, // Test fail
 	} {
 		actual := gotrialci.AddPlus(test.vals...)
 		if actual != test.want {
