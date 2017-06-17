@@ -7,8 +7,8 @@ CI trial for Go
 ## Setup CI for Go by Travis CI
 1. Sign up [Travis CI](https://travis-ci.org/).
 1. Add a config file.
-    ##### travis.yml
-    ```yml:.travis.yml
+    ##### .travis.yml
+    ```yml
     language: go
     
     go:
@@ -19,6 +19,9 @@ CI trial for Go
    The image is updated each time new codes are pushed.
     ##### README.md
     
-    ```markdown:README.md
+    ```markdown
     ![](https://travis-ci.org/"username"/"repository name".svg?branch=master)
     ```
+
+## Config
+https://docs.travis-ci.com/user/languages/go/
